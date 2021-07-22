@@ -1,0 +1,8 @@
+import 'package:dartz/dartz.dart';
+import 'package:number_trivia/core/error/failures.dart';
+import 'package:number_trivia/feature/number_trivia/domain/entities/number_trivia.dart';
+
+abstract class NumberTriviaRepository {
+  Future<Either<Failure, Numbertrivia>> getConcreterNumberTrivia(int number);
+  Future<Either<Failure, Numbertrivia>> getRandomNumberTrivia();
+}
